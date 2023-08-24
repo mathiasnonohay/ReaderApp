@@ -18,6 +18,8 @@
 		C71822622A974DED001B838F /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71822612A974DED001B838F /* Author.swift */; };
 		C71822652A97527C001B838F /* AuthorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71822632A97527C001B838F /* AuthorTableViewCell.swift */; };
 		C718226A2A975B2F001B838F /* AuthorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71822692A975B2F001B838F /* AuthorListViewModel.swift */; };
+		C75BDC462A97994600F7760F /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BDC452A97994600F7760F /* Work.swift */; };
+		C75BDC4A2A97AD4100F7760F /* AuthorWorkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BDC492A97AD4100F7760F /* AuthorWorkListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		C71822612A974DED001B838F /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		C71822632A97527C001B838F /* AuthorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorTableViewCell.swift; sourceTree = "<group>"; };
 		C71822692A975B2F001B838F /* AuthorListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorListViewModel.swift; sourceTree = "<group>"; };
+		C75BDC452A97994600F7760F /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
+		C75BDC492A97AD4100F7760F /* AuthorWorkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorWorkListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +107,8 @@
 		C702C0E02A97438B0090A957 /* ReaderApp */ = {
 			isa = PBXGroup;
 			children = (
+				C75BDC472A97AC8700F7760F /* ViewController */,
 				C718225F2A974DD4001B838F /* Model */,
-				C702C1132A97460B0090A957 /* Main */,
 				C702C1122A9745FE0090A957 /* Components */,
 				C702C1112A9745E50090A957 /* Resources */,
 				C702C0EF2A97438C0090A957 /* Info.plist */,
@@ -160,6 +164,7 @@
 		C718225F2A974DD4001B838F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C75BDC442A97993900F7760F /* Work */,
 				C71822602A974DD9001B838F /* Author */,
 			);
 			path = Model;
@@ -187,6 +192,31 @@
 				C71822692A975B2F001B838F /* AuthorListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C75BDC442A97993900F7760F /* Work */ = {
+			isa = PBXGroup;
+			children = (
+				C75BDC452A97994600F7760F /* Work.swift */,
+			);
+			path = Work;
+			sourceTree = "<group>";
+		};
+		C75BDC472A97AC8700F7760F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C75BDC482A97AC9100F7760F /* AuthorWorkList */,
+				C702C1132A97460B0090A957 /* Main */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C75BDC482A97AC9100F7760F /* AuthorWorkList */ = {
+			isa = PBXGroup;
+			children = (
+				C75BDC492A97AD4100F7760F /* AuthorWorkListViewController.swift */,
+			);
+			path = AuthorWorkList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,10 +350,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C71822622A974DED001B838F /* Author.swift in Sources */,
+				C75BDC462A97994600F7760F /* Work.swift in Sources */,
 				C718226A2A975B2F001B838F /* AuthorListViewModel.swift in Sources */,
 				C702C0E62A97438B0090A957 /* MainViewController.swift in Sources */,
 				C702C0E22A97438B0090A957 /* AppDelegate.swift in Sources */,
 				C71822652A97527C001B838F /* AuthorTableViewCell.swift in Sources */,
+				C75BDC4A2A97AD4100F7760F /* AuthorWorkListViewController.swift in Sources */,
 				C702C0E42A97438B0090A957 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
