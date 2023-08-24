@@ -10,7 +10,6 @@
 		C702C0E22A97438B0090A957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C702C0E12A97438B0090A957 /* AppDelegate.swift */; };
 		C702C0E42A97438B0090A957 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C702C0E32A97438B0090A957 /* SceneDelegate.swift */; };
 		C702C0E62A97438B0090A957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C702C0E52A97438B0090A957 /* ViewController.swift */; };
-		C702C0E92A97438B0090A957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C702C0E72A97438B0090A957 /* Main.storyboard */; };
 		C702C0EB2A97438C0090A957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C702C0EA2A97438C0090A957 /* Assets.xcassets */; };
 		C702C0EE2A97438C0090A957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C702C0EC2A97438C0090A957 /* LaunchScreen.storyboard */; };
 		C702C0F92A97438D0090A957 /* MarxistAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C702C0F82A97438D0090A957 /* MarxistAppTests.swift */; };
@@ -36,17 +35,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C702C0DE2A97438B0090A957 /* MarxistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarxistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C702C0DE2A97438B0090A957 /* ReaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReaderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C702C0E12A97438B0090A957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C702C0E32A97438B0090A957 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C702C0E52A97438B0090A957 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C702C0E82A97438B0090A957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C702C0EA2A97438C0090A957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C702C0ED2A97438C0090A957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C702C0EF2A97438C0090A957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C702C0F42A97438D0090A957 /* MarxistAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarxistAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C702C0F42A97438D0090A957 /* ReaderAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReaderAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C702C0F82A97438D0090A957 /* MarxistAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarxistAppTests.swift; sourceTree = "<group>"; };
-		C702C0FE2A97438D0090A957 /* MarxistAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarxistAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C702C0FE2A97438D0090A957 /* ReaderAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReaderAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C702C1022A97438D0090A957 /* MarxistAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarxistAppUITests.swift; sourceTree = "<group>"; };
 		C702C1042A97438D0090A957 /* MarxistAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarxistAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,9 +77,9 @@
 		C702C0D52A97438B0090A957 = {
 			isa = PBXGroup;
 			children = (
-				C702C0E02A97438B0090A957 /* MarxistApp */,
-				C702C0F72A97438D0090A957 /* MarxistAppTests */,
-				C702C1012A97438D0090A957 /* MarxistAppUITests */,
+				C702C0E02A97438B0090A957 /* ReaderApp */,
+				C702C0F72A97438D0090A957 /* ReaderAppTests */,
+				C702C1012A97438D0090A957 /* ReaderAppUITests */,
 				C702C0DF2A97438B0090A957 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,50 +87,73 @@
 		C702C0DF2A97438B0090A957 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C702C0DE2A97438B0090A957 /* MarxistApp.app */,
-				C702C0F42A97438D0090A957 /* MarxistAppTests.xctest */,
-				C702C0FE2A97438D0090A957 /* MarxistAppUITests.xctest */,
+				C702C0DE2A97438B0090A957 /* ReaderApp.app */,
+				C702C0F42A97438D0090A957 /* ReaderAppTests.xctest */,
+				C702C0FE2A97438D0090A957 /* ReaderAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C702C0E02A97438B0090A957 /* MarxistApp */ = {
+		C702C0E02A97438B0090A957 /* ReaderApp */ = {
 			isa = PBXGroup;
 			children = (
-				C702C0E12A97438B0090A957 /* AppDelegate.swift */,
-				C702C0E32A97438B0090A957 /* SceneDelegate.swift */,
-				C702C0E52A97438B0090A957 /* ViewController.swift */,
-				C702C0E72A97438B0090A957 /* Main.storyboard */,
-				C702C0EA2A97438C0090A957 /* Assets.xcassets */,
-				C702C0EC2A97438C0090A957 /* LaunchScreen.storyboard */,
+				C702C1132A97460B0090A957 /* Main */,
+				C702C1122A9745FE0090A957 /* Components */,
+				C702C1112A9745E50090A957 /* Resources */,
 				C702C0EF2A97438C0090A957 /* Info.plist */,
 			);
-			path = MarxistApp;
+			path = ReaderApp;
 			sourceTree = "<group>";
 		};
-		C702C0F72A97438D0090A957 /* MarxistAppTests */ = {
+		C702C0F72A97438D0090A957 /* ReaderAppTests */ = {
 			isa = PBXGroup;
 			children = (
 				C702C0F82A97438D0090A957 /* MarxistAppTests.swift */,
 			);
-			path = MarxistAppTests;
+			path = ReaderAppTests;
 			sourceTree = "<group>";
 		};
-		C702C1012A97438D0090A957 /* MarxistAppUITests */ = {
+		C702C1012A97438D0090A957 /* ReaderAppUITests */ = {
 			isa = PBXGroup;
 			children = (
 				C702C1022A97438D0090A957 /* MarxistAppUITests.swift */,
 				C702C1042A97438D0090A957 /* MarxistAppUITestsLaunchTests.swift */,
 			);
-			path = MarxistAppUITests;
+			path = ReaderAppUITests;
+			sourceTree = "<group>";
+		};
+		C702C1112A9745E50090A957 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C702C0E12A97438B0090A957 /* AppDelegate.swift */,
+				C702C0E32A97438B0090A957 /* SceneDelegate.swift */,
+				C702C0EA2A97438C0090A957 /* Assets.xcassets */,
+				C702C0EC2A97438C0090A957 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C702C1122A9745FE0090A957 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C702C1132A97460B0090A957 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C702C0E52A97438B0090A957 /* ViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C702C0DD2A97438B0090A957 /* MarxistApp */ = {
+		C702C0DD2A97438B0090A957 /* ReaderApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C702C1082A97438D0090A957 /* Build configuration list for PBXNativeTarget "MarxistApp" */;
+			buildConfigurationList = C702C1082A97438D0090A957 /* Build configuration list for PBXNativeTarget "ReaderApp" */;
 			buildPhases = (
 				C702C0DA2A97438B0090A957 /* Sources */,
 				C702C0DB2A97438B0090A957 /* Frameworks */,
@@ -142,14 +163,14 @@
 			);
 			dependencies = (
 			);
-			name = MarxistApp;
+			name = ReaderApp;
 			productName = MarxistApp;
-			productReference = C702C0DE2A97438B0090A957 /* MarxistApp.app */;
+			productReference = C702C0DE2A97438B0090A957 /* ReaderApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C702C0F32A97438D0090A957 /* MarxistAppTests */ = {
+		C702C0F32A97438D0090A957 /* ReaderAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C702C10B2A97438D0090A957 /* Build configuration list for PBXNativeTarget "MarxistAppTests" */;
+			buildConfigurationList = C702C10B2A97438D0090A957 /* Build configuration list for PBXNativeTarget "ReaderAppTests" */;
 			buildPhases = (
 				C702C0F02A97438D0090A957 /* Sources */,
 				C702C0F12A97438D0090A957 /* Frameworks */,
@@ -160,14 +181,14 @@
 			dependencies = (
 				C702C0F62A97438D0090A957 /* PBXTargetDependency */,
 			);
-			name = MarxistAppTests;
+			name = ReaderAppTests;
 			productName = MarxistAppTests;
-			productReference = C702C0F42A97438D0090A957 /* MarxistAppTests.xctest */;
+			productReference = C702C0F42A97438D0090A957 /* ReaderAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C702C0FD2A97438D0090A957 /* MarxistAppUITests */ = {
+		C702C0FD2A97438D0090A957 /* ReaderAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C702C10E2A97438D0090A957 /* Build configuration list for PBXNativeTarget "MarxistAppUITests" */;
+			buildConfigurationList = C702C10E2A97438D0090A957 /* Build configuration list for PBXNativeTarget "ReaderAppUITests" */;
 			buildPhases = (
 				C702C0FA2A97438D0090A957 /* Sources */,
 				C702C0FB2A97438D0090A957 /* Frameworks */,
@@ -178,9 +199,9 @@
 			dependencies = (
 				C702C1002A97438D0090A957 /* PBXTargetDependency */,
 			);
-			name = MarxistAppUITests;
+			name = ReaderAppUITests;
 			productName = MarxistAppUITests;
-			productReference = C702C0FE2A97438D0090A957 /* MarxistAppUITests.xctest */;
+			productReference = C702C0FE2A97438D0090A957 /* ReaderAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +227,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C702C0D92A97438B0090A957 /* Build configuration list for PBXProject "MarxistApp" */;
+			buildConfigurationList = C702C0D92A97438B0090A957 /* Build configuration list for PBXProject "ReaderApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -219,9 +240,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C702C0DD2A97438B0090A957 /* MarxistApp */,
-				C702C0F32A97438D0090A957 /* MarxistAppTests */,
-				C702C0FD2A97438D0090A957 /* MarxistAppUITests */,
+				C702C0DD2A97438B0090A957 /* ReaderApp */,
+				C702C0F32A97438D0090A957 /* ReaderAppTests */,
+				C702C0FD2A97438D0090A957 /* ReaderAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,7 +254,6 @@
 			files = (
 				C702C0EE2A97438C0090A957 /* LaunchScreen.storyboard in Resources */,
 				C702C0EB2A97438C0090A957 /* Assets.xcassets in Resources */,
-				C702C0E92A97438B0090A957 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,25 +306,17 @@
 /* Begin PBXTargetDependency section */
 		C702C0F62A97438D0090A957 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C702C0DD2A97438B0090A957 /* MarxistApp */;
+			target = C702C0DD2A97438B0090A957 /* ReaderApp */;
 			targetProxy = C702C0F52A97438D0090A957 /* PBXContainerItemProxy */;
 		};
 		C702C1002A97438D0090A957 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C702C0DD2A97438B0090A957 /* MarxistApp */;
+			target = C702C0DD2A97438B0090A957 /* ReaderApp */;
 			targetProxy = C702C0FF2A97438D0090A957 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C702C0E72A97438B0090A957 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C702C0E82A97438B0090A957 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C702C0EC2A97438C0090A957 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -438,10 +450,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MarxistApp/Info.plist;
+				INFOPLIST_FILE = ReaderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -449,7 +460,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mathias.MarxistApp;
+				PRODUCT_BUNDLE_IDENTIFIER = mathias.ReaderApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -465,10 +476,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MarxistApp/Info.plist;
+				INFOPLIST_FILE = ReaderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -476,7 +486,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mathias.MarxistApp;
+				PRODUCT_BUNDLE_IDENTIFIER = mathias.ReaderApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -499,7 +509,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarxistApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MarxistApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReaderApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ReaderApp";
 			};
 			name = Debug;
 		};
@@ -518,7 +528,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarxistApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MarxistApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReaderApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ReaderApp";
 			};
 			name = Release;
 		};
@@ -559,7 +569,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C702C0D92A97438B0090A957 /* Build configuration list for PBXProject "MarxistApp" */ = {
+		C702C0D92A97438B0090A957 /* Build configuration list for PBXProject "ReaderApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C702C1062A97438D0090A957 /* Debug */,
@@ -568,7 +578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C702C1082A97438D0090A957 /* Build configuration list for PBXNativeTarget "MarxistApp" */ = {
+		C702C1082A97438D0090A957 /* Build configuration list for PBXNativeTarget "ReaderApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C702C1092A97438D0090A957 /* Debug */,
@@ -577,7 +587,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C702C10B2A97438D0090A957 /* Build configuration list for PBXNativeTarget "MarxistAppTests" */ = {
+		C702C10B2A97438D0090A957 /* Build configuration list for PBXNativeTarget "ReaderAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C702C10C2A97438D0090A957 /* Debug */,
@@ -586,7 +596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C702C10E2A97438D0090A957 /* Build configuration list for PBXNativeTarget "MarxistAppUITests" */ = {
+		C702C10E2A97438D0090A957 /* Build configuration list for PBXNativeTarget "ReaderAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C702C10F2A97438D0090A957 /* Debug */,
