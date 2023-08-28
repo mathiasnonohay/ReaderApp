@@ -3,4 +3,54 @@
    uuid = "D9ED8E12-8143-4B84-90F0-97D82C328B5F"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "608FCCCE-9040-45B3-BB66-E7DE7D945D1D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReaderApp/ViewController/AuthorWorkList/AuthorWorkListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "608FCCCE-9040-45B3-BB66-E7DE7D945D1D - a1885ec5fc8657e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReaderApp.AuthorWorkListViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "ReaderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mathias/MProj/ReaderApp/ReaderApp/ViewController/AuthorWorkList/AuthorWorkListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "608FCCCE-9040-45B3-BB66-E7DE7D945D1D - a1885ec5fc8657e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReaderApp.AuthorWorkListViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "ReaderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mathias/MProj/ReaderApp/ReaderApp/ViewController/AuthorWorkList/AuthorWorkListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "852">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

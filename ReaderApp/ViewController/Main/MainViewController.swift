@@ -61,5 +61,11 @@ extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = viewModel.authorList[indexPath.row]
+        let vc = AuthorWorkListViewController(model: model)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 

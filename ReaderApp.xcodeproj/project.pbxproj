@@ -18,8 +18,11 @@
 		C71822622A974DED001B838F /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71822612A974DED001B838F /* Author.swift */; };
 		C71822652A97527C001B838F /* AuthorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71822632A97527C001B838F /* AuthorTableViewCell.swift */; };
 		C718226A2A975B2F001B838F /* AuthorListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71822692A975B2F001B838F /* AuthorListViewModel.swift */; };
+		C74266D52A9CECFE00B567B6 /* AuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74266D42A9CECFE00B567B6 /* AuthorView.swift */; };
+		C74266D82A9CEE8C00B567B6 /* AuthorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74266D72A9CEE8C00B567B6 /* AuthorViewModel.swift */; };
 		C75BDC462A97994600F7760F /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BDC452A97994600F7760F /* Work.swift */; };
 		C75BDC4A2A97AD4100F7760F /* AuthorWorkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BDC492A97AD4100F7760F /* AuthorWorkListViewController.swift */; };
+		C7F10A9D2A9D1C0500CDB304 /* WorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F10A9C2A9D1C0500CDB304 /* WorkTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +58,11 @@
 		C71822612A974DED001B838F /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		C71822632A97527C001B838F /* AuthorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorTableViewCell.swift; sourceTree = "<group>"; };
 		C71822692A975B2F001B838F /* AuthorListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorListViewModel.swift; sourceTree = "<group>"; };
+		C74266D42A9CECFE00B567B6 /* AuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorView.swift; sourceTree = "<group>"; };
+		C74266D72A9CEE8C00B567B6 /* AuthorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorViewModel.swift; sourceTree = "<group>"; };
 		C75BDC452A97994600F7760F /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		C75BDC492A97AD4100F7760F /* AuthorWorkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorWorkListViewController.swift; sourceTree = "<group>"; };
+		C7F10A9C2A9D1C0500CDB304 /* WorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 		C702C1122A9745FE0090A957 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C7F10A9B2A9D1BC400CDB304 /* WorkCell */,
 				C71822672A97527F001B838F /* AuthorCell */,
 			);
 			path = Components;
@@ -194,6 +201,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C74266D62A9CEE7700B567B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C74266D72A9CEE8C00B567B6 /* AuthorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C75BDC442A97993900F7760F /* Work */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,9 +229,19 @@
 		C75BDC482A97AC9100F7760F /* AuthorWorkList */ = {
 			isa = PBXGroup;
 			children = (
+				C74266D62A9CEE7700B567B6 /* ViewModel */,
 				C75BDC492A97AD4100F7760F /* AuthorWorkListViewController.swift */,
+				C74266D42A9CECFE00B567B6 /* AuthorView.swift */,
 			);
 			path = AuthorWorkList;
+			sourceTree = "<group>";
+		};
+		C7F10A9B2A9D1BC400CDB304 /* WorkCell */ = {
+			isa = PBXGroup;
+			children = (
+				C7F10A9C2A9D1C0500CDB304 /* WorkTableViewCell.swift */,
+			);
+			path = WorkCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,14 +374,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C74266D52A9CECFE00B567B6 /* AuthorView.swift in Sources */,
 				C71822622A974DED001B838F /* Author.swift in Sources */,
 				C75BDC462A97994600F7760F /* Work.swift in Sources */,
+				C7F10A9D2A9D1C0500CDB304 /* WorkTableViewCell.swift in Sources */,
 				C718226A2A975B2F001B838F /* AuthorListViewModel.swift in Sources */,
 				C702C0E62A97438B0090A957 /* MainViewController.swift in Sources */,
 				C702C0E22A97438B0090A957 /* AppDelegate.swift in Sources */,
 				C71822652A97527C001B838F /* AuthorTableViewCell.swift in Sources */,
 				C75BDC4A2A97AD4100F7760F /* AuthorWorkListViewController.swift in Sources */,
 				C702C0E42A97438B0090A957 /* SceneDelegate.swift in Sources */,
+				C74266D82A9CEE8C00B567B6 /* AuthorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
