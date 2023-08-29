@@ -37,10 +37,17 @@ class AuthorView: UIView {
         lbl.numberOfLines = 4
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.contentMode = .topLeft
-        lbl.isUserInteractionEnabled = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(showMoreLabel))
-        lbl.addGestureRecognizer(tap)
         return lbl
+    }()
+    
+    lazy var arrowReadMoreView: UIImageView = {
+        let view = UIImageView()
+        view.image = UIImage(systemName: "chevron.down")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showMoreLabel))
+        view.addGestureRecognizer(tap)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.isUserInteractionEnabled = true
+        return view
     }()
     
     override init(frame: CGRect) {
@@ -55,7 +62,9 @@ class AuthorView: UIView {
     @objc
     private func showMoreLabel() {
         descriptionLabel.numberOfLines = isShowMore ?  4 : 0
+        arrowReadMoreView.image = isShowMore ? UIImage(systemName: "chevron.down") : UIImage(systemName: "chevron.up")
         UIView.animate(withDuration: 0.5) {
+            self.superview?.layoutIfNeeded()
             self.descriptionLabel.superview?.layoutIfNeeded()
         }
         isShowMore = !isShowMore
@@ -66,8 +75,6 @@ class AuthorView: UIView {
         authorName.text = viewModel.authorName
         lifePeriod.text = viewModel.period
         descriptionLabel.text = viewModel.description
-        
-        
         self.backgroundColor = .white
     }
     
@@ -76,22 +83,30 @@ class AuthorView: UIView {
         self.addSubview(authorName)
         self.addSubview(lifePeriod)
         self.addSubview(descriptionLabel)
+        self.addSubview(arrowReadMoreView)
         
         NSLayoutConstraint.activate([
-            portraitView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            portraitView.topAnchor.constraint(equalTo: self.topAnchor),
             portraitView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            portraitView.heightAnchor.constraint(equalToConstant: 300),
             
             authorName.topAnchor.constraint(equalTo: portraitView.bottomAnchor, constant: 10),
             authorName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             authorName.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            authorName.heightAnchor.constraint(equalToConstant: 22),
             
             lifePeriod.topAnchor.constraint(equalTo: authorName.bottomAnchor, constant: 8),
             lifePeriod.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            lifePeriod.heightAnchor.constraint(equalToConstant: 12),
             
             descriptionLabel.topAnchor.constraint(equalTo: lifePeriod.bottomAnchor, constant: 10),
             descriptionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            descriptionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10)
+            descriptionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             
+            arrowReadMoreView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 5),
+            arrowReadMoreView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            arrowReadMoreView.heightAnchor.constraint(equalToConstant: 15),
+            arrowReadMoreView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10)
         ])
         
         

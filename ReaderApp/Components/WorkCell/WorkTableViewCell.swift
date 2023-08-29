@@ -11,6 +11,7 @@ class WorkTableViewCell: UITableViewCell {
     
     lazy var title: UILabel = {
         let lbl = UILabel()
+        lbl.numberOfLines = 0
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
@@ -18,12 +19,21 @@ class WorkTableViewCell: UITableViewCell {
     lazy var workYear: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.font = .systemFont(ofSize: 14, weight: .light)
         return lbl
     }()
     
-    lazy var arrowEnterView: UIImageView = {
+    lazy var imageContentView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    
+    lazy var readWorkImageView: UIImageView = {
         let view = UIImageView()
-        view.image = UIImage(systemName: "doc.text.fill")
+        view.image = UIImage(systemName: "book.circle")
+        view.contentMode = .redraw
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -33,16 +43,24 @@ class WorkTableViewCell: UITableViewCell {
         
         contentView.addSubview(title)
         contentView.addSubview(workYear)
-        contentView.addSubview(arrowEnterView)
+        contentView.addSubview(imageContentView)
+        imageContentView.addSubview(readWorkImageView)
+        
         
         NSLayoutConstraint.activate([
             title.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             
-            arrowEnterView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-            arrowEnterView.leadingAnchor.constraint(equalTo: title.trailingAnchor, constant: 10),
-            arrowEnterView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-            arrowEnterView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 10),
+            imageContentView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            imageContentView.leadingAnchor.constraint(equalTo: title.trailingAnchor, constant: 10),
+            imageContentView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+            imageContentView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            imageContentView.widthAnchor.constraint(equalTo: readWorkImageView.widthAnchor),
+            
+            readWorkImageView.centerXAnchor.constraint(equalTo: imageContentView.centerXAnchor),
+            readWorkImageView.centerYAnchor.constraint(equalTo: imageContentView.centerYAnchor),
+            readWorkImageView.heightAnchor.constraint(equalToConstant: 30),
+            readWorkImageView.widthAnchor.constraint(equalToConstant: 30),
             
             workYear.topAnchor.constraint(equalTo: title.bottomAnchor),
             workYear.leadingAnchor.constraint(equalTo: title.leadingAnchor),

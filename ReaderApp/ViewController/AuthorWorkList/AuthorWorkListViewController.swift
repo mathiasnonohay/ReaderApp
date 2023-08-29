@@ -65,12 +65,16 @@ class AuthorWorkListViewController: UIViewController {
     }
 }
 
-extension AuthorWorkListViewController: UITableViewDelegate {}
+extension AuthorWorkListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+}
 
 extension AuthorWorkListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let rows = viewModel?.works?.count else { return 0 }
-        return 10
+        return rows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
