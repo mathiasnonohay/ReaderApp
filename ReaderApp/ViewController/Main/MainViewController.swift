@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    private let viewModel: AuthorListViewModel = AuthorListViewModel()
+    private var model = [Author]()
     
     lazy var tableView: UITableView = {
         let tbView = UITableView()
@@ -20,13 +20,29 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Autores"
-        setupTableView()
-        setupConstraints()
-        setNavBar()
+        LoadingView().showLoading(view)
+        fetchAuthorList()
+    }
+    
+    private func fetchAuthorList() {
+        let viewModel = AuthorListViewModel()
+        viewModel.fetchAuthorList { result in
+            switch result {
+            case .success(let authorList):
+                LoadingView().hideLoading()
+                self.model = authorList
+                self.setupTableView()
+                self.setupConstraints()
+                self.setNavBar()
+            case .failure(let failure):
+                print(failure)
+            }
+        }
+        
     }
     
     private func setNavBar() {
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = false
         navigationController?.navigationItem.largeTitleDisplayMode = .automatic
     }
     
@@ -45,13 +61,13 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.authorList.count
+        return model.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "AuthorTableViewCell", for: indexPath) as? AuthorTableViewCell else { return UITableViewCell() }
         
-        cell.setupCell(with: viewModel.authorList[indexPath.row])
+        cell.setupCell(with: model[indexPath.row])
         
         return cell
     }
@@ -63,7 +79,7 @@ extension MainViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let model = viewModel.authorList[indexPath.row]
+        let model = model[indexPath.row]
         let vc = AuthorWorkListViewController(model: model)
         navigationController?.pushViewController(vc, animated: true)
     }

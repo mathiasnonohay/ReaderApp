@@ -9,7 +9,7 @@ import UIKit
 
 class AuthorListViewModel {
     typealias AuthorList = [Author]
-    lazy var authorList: AuthorList = {
+    private lazy var authorList: AuthorList = {
         return [
             Author(identifier: "luxemburgo", portrait: UIImage(named: "Rosa_Luxemburg") ?? UIImage(), name: "Rosa Luxemburgo", lifePeriod: "1871 - 1919", phrase: "", description: "Entrou para o movimento revolucionário ainda estudante. Em 1893, colaborou na fundação do Partido Social Democrata Polaco. Entrou para o Partido Social Democrata Alemão em 1898. Em 1907, em Londres, na conferência do Partido Social Democrata Russo, apoiou os bolcheviques contra os mencheviques em todos os problemas mais importantes da Revolução russa. No mesmo ano, no Congresso de Stuttgart da II Internacional, juntamente com Lenin, apresentou a proposta revolucionária contra a guerra e que foi adotada, na essência, pelo Congresso. Após a Revolução de Novembro de 1918 na Alemanha, juntou-se a Karl Liebknecht e fundaram o Partido Comunista Alemão.", works: [Work(
                 title: "Quais São as Origens do Dia dos Trabalhadores?",
@@ -37,4 +37,21 @@ class AuthorListViewModel {
                 transcrition: "")])
         ]
     }()
+    
+    func fetchAuthorList(completion: @escaping(Result<AuthorList, Error>) -> Void) {
+        let timer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { timer in
+            completion(.success(self.authorList))
+        }
+        
+        
+        if !timer.isValid {
+            completion(.failure(AuthorError.mockFailure))
+        }
+    }
+    
+}
+
+enum AuthorError: Error {
+    case mockFailure
+    case invalidInput(Character)
 }

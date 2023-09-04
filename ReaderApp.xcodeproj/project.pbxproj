@@ -23,6 +23,10 @@
 		C75BDC462A97994600F7760F /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BDC452A97994600F7760F /* Work.swift */; };
 		C75BDC4A2A97AD4100F7760F /* AuthorWorkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BDC492A97AD4100F7760F /* AuthorWorkListViewController.swift */; };
 		C7F10A9D2A9D1C0500CDB304 /* WorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F10A9C2A9D1C0500CDB304 /* WorkTableViewCell.swift */; };
+		C7F10AA22A9F34CA00CDB304 /* PDFHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F10AA12A9F34CA00CDB304 /* PDFHelper.swift */; };
+		C7F10AA52A9F453F00CDB304 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F10AA42A9F453F00CDB304 /* PDFViewController.swift */; };
+		C7F10AAA2A9F4BF200CDB304 /* mockHtml.html in Resources */ = {isa = PBXBuildFile; fileRef = C7F10AA92A9F4BF200CDB304 /* mockHtml.html */; };
+		C7FDB82E2AA669FA00E49F50 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FDB82D2AA669FA00E49F50 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		C75BDC452A97994600F7760F /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		C75BDC492A97AD4100F7760F /* AuthorWorkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorWorkListViewController.swift; sourceTree = "<group>"; };
 		C7F10A9C2A9D1C0500CDB304 /* WorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTableViewCell.swift; sourceTree = "<group>"; };
+		C7F10AA12A9F34CA00CDB304 /* PDFHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFHelper.swift; sourceTree = "<group>"; };
+		C7F10AA42A9F453F00CDB304 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
+		C7F10AA92A9F4BF200CDB304 /* mockHtml.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mockHtml.html; sourceTree = "<group>"; };
+		C7FDB82D2AA669FA00E49F50 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E8E22B101EA1D93EFA2C6A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C702C0D52A97438B0090A957 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +112,7 @@
 				C702C0F72A97438D0090A957 /* ReaderAppTests */,
 				C702C1012A97438D0090A957 /* ReaderAppUITests */,
 				C702C0DF2A97438B0090A957 /* Products */,
+				4E8E22B101EA1D93EFA2C6A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +129,8 @@
 		C702C0E02A97438B0090A957 /* ReaderApp */ = {
 			isa = PBXGroup;
 			children = (
+				C7F10AA82A9F463800CDB304 /* Helper */,
+				C7F10A9E2A9F308800CDB304 /* MockedHTML */,
 				C75BDC472A97AC8700F7760F /* ViewController */,
 				C718225F2A974DD4001B838F /* Model */,
 				C702C1122A9745FE0090A957 /* Components */,
@@ -153,6 +171,7 @@
 		C702C1122A9745FE0090A957 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C7FDB82C2AA669BF00E49F50 /* LoadingView */,
 				C7F10A9B2A9D1BC400CDB304 /* WorkCell */,
 				C71822672A97527F001B838F /* AuthorCell */,
 			);
@@ -220,6 +239,7 @@
 		C75BDC472A97AC8700F7760F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C7F10AA32A9F451E00CDB304 /* PDFView */,
 				C75BDC482A97AC9100F7760F /* AuthorWorkList */,
 				C702C1132A97460B0090A957 /* Main */,
 			);
@@ -242,6 +262,38 @@
 				C7F10A9C2A9D1C0500CDB304 /* WorkTableViewCell.swift */,
 			);
 			path = WorkCell;
+			sourceTree = "<group>";
+		};
+		C7F10A9E2A9F308800CDB304 /* MockedHTML */ = {
+			isa = PBXGroup;
+			children = (
+				C7F10AA92A9F4BF200CDB304 /* mockHtml.html */,
+			);
+			path = MockedHTML;
+			sourceTree = "<group>";
+		};
+		C7F10AA32A9F451E00CDB304 /* PDFView */ = {
+			isa = PBXGroup;
+			children = (
+				C7F10AA42A9F453F00CDB304 /* PDFViewController.swift */,
+			);
+			path = PDFView;
+			sourceTree = "<group>";
+		};
+		C7F10AA82A9F463800CDB304 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C7F10AA12A9F34CA00CDB304 /* PDFHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		C7FDB82C2AA669BF00E49F50 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				C7FDB82D2AA669FA00E49F50 /* LoadingView.swift */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +320,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C702C10B2A97438D0090A957 /* Build configuration list for PBXNativeTarget "ReaderAppTests" */;
 			buildPhases = (
+				39CAD4E8EF3602394F4F98D9 /* [CP] Check Pods Manifest.lock */,
 				C702C0F02A97438D0090A957 /* Sources */,
 				C702C0F12A97438D0090A957 /* Frameworks */,
 				C702C0F22A97438D0090A957 /* Resources */,
@@ -286,9 +339,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C702C10E2A97438D0090A957 /* Build configuration list for PBXNativeTarget "ReaderAppUITests" */;
 			buildPhases = (
+				68729584DC6889E0E64CB13A /* [CP] Check Pods Manifest.lock */,
 				C702C0FA2A97438D0090A957 /* Sources */,
 				C702C0FB2A97438D0090A957 /* Frameworks */,
 				C702C0FC2A97438D0090A957 /* Resources */,
+				AEE318CC2C945E8A2A5BAC8B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -350,6 +405,7 @@
 			files = (
 				C702C0EE2A97438C0090A957 /* LaunchScreen.storyboard in Resources */,
 				C702C0EB2A97438C0090A957 /* Assets.xcassets in Resources */,
+				C7F10AAA2A9F4BF200CDB304 /* mockHtml.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +425,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39CAD4E8EF3602394F4F98D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReaderAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68729584DC6889E0E64CB13A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReaderApp-ReaderAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEE318CC2C945E8A2A5BAC8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReaderApp-ReaderAppUITests/Pods-ReaderApp-ReaderAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReaderApp-ReaderAppUITests/Pods-ReaderApp-ReaderAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReaderApp-ReaderAppUITests/Pods-ReaderApp-ReaderAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C702C0DA2A97438B0090A957 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -377,12 +497,15 @@
 				C74266D52A9CECFE00B567B6 /* AuthorView.swift in Sources */,
 				C71822622A974DED001B838F /* Author.swift in Sources */,
 				C75BDC462A97994600F7760F /* Work.swift in Sources */,
+				C7F10AA52A9F453F00CDB304 /* PDFViewController.swift in Sources */,
 				C7F10A9D2A9D1C0500CDB304 /* WorkTableViewCell.swift in Sources */,
+				C7FDB82E2AA669FA00E49F50 /* LoadingView.swift in Sources */,
 				C718226A2A975B2F001B838F /* AuthorListViewModel.swift in Sources */,
 				C702C0E62A97438B0090A957 /* MainViewController.swift in Sources */,
 				C702C0E22A97438B0090A957 /* AppDelegate.swift in Sources */,
 				C71822652A97527C001B838F /* AuthorTableViewCell.swift in Sources */,
 				C75BDC4A2A97AD4100F7760F /* AuthorWorkListViewController.swift in Sources */,
+				C7F10AA22A9F34CA00CDB304 /* PDFHelper.swift in Sources */,
 				C702C0E42A97438B0090A957 /* SceneDelegate.swift in Sources */,
 				C74266D82A9CEE8C00B567B6 /* AuthorViewModel.swift in Sources */,
 			);
@@ -553,6 +676,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F64MFXX9M4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReaderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -579,6 +703,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F64MFXX9M4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReaderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
