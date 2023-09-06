@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Author {
+struct AuthorMock {
     let identifier: String
     let portrait: UIImage
     let name: String
@@ -16,3 +16,17 @@ struct Author {
     let description: String
     let works: [Work]
 }
+
+// MARK: - CardResponseElement
+struct AuthorResponseElement: Codable {
+    let name, link, lifePeriod, biography: String
+
+    enum CodingKeys: String, CodingKey {
+        case name, link
+        case lifePeriod = "life_period"
+        case biography
+    }
+}
+
+typealias AuthorResponse = [AuthorResponseElement]
+

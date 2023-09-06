@@ -23,7 +23,7 @@ class AuthorWorkListViewController: UIViewController {
         return view
     }()
     
-    init(model: Author) {
+    init(model: AuthorResponseElement) {
         self.viewModel = AuthorViewModel(author: model)
         super.init(nibName: nil, bundle: nil)
     }

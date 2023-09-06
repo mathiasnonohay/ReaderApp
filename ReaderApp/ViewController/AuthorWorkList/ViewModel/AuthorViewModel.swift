@@ -15,11 +15,11 @@ class AuthorViewModel {
     let description: String?
     let works: [Work]?
     
-    init(author: Author) {
+    init(author: AuthorResponseElement) {
         self.authorName = author.name
         self.period = author.lifePeriod
-        self.portrait = author.portrait
-        self.description = author.description
-        self.works = author.works
+        self.portrait = UIImage()
+        self.description = ""
+        self.works = []
     }
 }

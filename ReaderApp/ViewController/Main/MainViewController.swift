@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    private var model = [Author]()
+    private var viewModel = [AuthorResponseElement]()
     
     lazy var tableView: UITableView = {
         let tbView = UITableView()
@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
             switch result {
             case .success(let authorList):
                 LoadingView().hideLoading()
-                self.model = authorList
+                self.viewModel = authorList
                 self.setupTableView()
                 self.setupConstraints()
                 self.setNavBar()
@@ -61,13 +61,13 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.count
+        return viewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "AuthorTableViewCell", for: indexPath) as? AuthorTableViewCell else { return UITableViewCell() }
         
-        cell.setupCell(with: model[indexPath.row])
+        cell.setupCell(with: viewModel[indexPath.row])
         
         return cell
     }
@@ -79,7 +79,7 @@ extension MainViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let model = model[indexPath.row]
+        let model = viewModel[indexPath.row]
         let vc = AuthorWorkListViewController(model: model)
         navigationController?.pushViewController(vc, animated: true)
     }
