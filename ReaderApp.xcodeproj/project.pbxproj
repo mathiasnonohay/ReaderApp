@@ -266,6 +266,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C757E60F2AAF06F700CE0B54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C74266D42A9CECFE00B567B6 /* AuthorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C75BDC442A97993900F7760F /* Work */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,9 +295,9 @@
 		C75BDC482A97AC9100F7760F /* AuthorWorkList */ = {
 			isa = PBXGroup;
 			children = (
+				C757E60F2AAF06F700CE0B54 /* Views */,
 				C74266D62A9CEE7700B567B6 /* ViewModel */,
 				C75BDC492A97AD4100F7760F /* AuthorWorkListViewController.swift */,
-				C74266D42A9CECFE00B567B6 /* AuthorView.swift */,
 			);
 			path = AuthorWorkList;
 			sourceTree = "<group>";

@@ -27,15 +27,16 @@ class MainViewController: UIViewController {
     private func fetchAuthorList() {
         let viewModel = AuthorListViewModel()
         viewModel.fetchAuthorList { result in
+            LoadingView().hideLoading()
             switch result {
             case .success(let authorList):
-                LoadingView().hideLoading()
                 self.viewModel = authorList
                 self.setupTableView()
                 self.setupConstraints()
                 self.setNavBar()
             case .failure(let failure):
                 print(failure)
+                self.fetchAuthorList()
             }
         }
         

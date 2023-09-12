@@ -70,10 +70,10 @@ class AuthorView: UIView {
         isShowMore = !isShowMore
     }
     
-    func setupView(with viewModel: AuthorViewModel) {
-        portraitView.image = viewModel.portrait
-        authorName.text = viewModel.authorName
-        lifePeriod.text = viewModel.period
+    func setupView(with viewModel: AuthorDetail) {
+//        portraitView.image = viewModel.portrait
+        authorName.text = viewModel.name
+        lifePeriod.text = viewModel.lifePeriod
         descriptionLabel.text = viewModel.description
         self.backgroundColor = .white
     }

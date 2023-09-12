@@ -9,7 +9,7 @@ import UIKit
 
 class AuthorWorkListViewController: UIViewController {
     
-    var viewModel: AuthorViewModel?
+    var viewModel: AuthorDetail?
     
     lazy var workTableView: UITableView = {
         let tbView = UITableView()
@@ -24,8 +24,20 @@ class AuthorWorkListViewController: UIViewController {
     }()
     
     init(model: AuthorResponseElement) {
-        self.viewModel = AuthorViewModel(author: model)
         super.init(nibName: nil, bundle: nil)
+        let viewmodel = AuthorViewModel()
+        viewmodel.fetchAuthorDetail(from: model.id) {[weak self] result in
+            LoadingView().hideLoading()
+            switch result {
+            case .success(let authorDetail):
+                self?.viewModel = authorDetail
+                self?.workTableView.reloadData()
+                self?.configureView()
+                self?.setupTableView()
+            case .failure(let failure):
+                print(failure)
+            }
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -34,8 +46,7 @@ class AuthorWorkListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView()
-        setupTableView()
+        LoadingView().showLoading(view)
     }
     
     private func setupTableView() {
@@ -78,12 +89,12 @@ extension AuthorWorkListViewController: UITableViewDelegate {
 
 extension AuthorWorkListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let rows = viewModel?.works?.count else { return 0 }
+        guard let rows = viewModel?.works.count else { return 0 }
         return rows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let work = viewModel?.works?[indexPath.row],
+        guard let work = viewModel?.works[indexPath.row],
               let cell = tableView.dequeueReusableCell(withIdentifier: "WorkTableViewCell", for: indexPath) as? WorkTableViewCell else {
             return UITableViewCell()
         }

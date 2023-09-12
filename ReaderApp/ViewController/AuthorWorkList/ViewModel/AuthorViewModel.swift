@@ -9,17 +9,20 @@ import Foundation
 import UIKit
 
 class AuthorViewModel {
-    let authorName: String?
-    let period: String?
-    let portrait: UIImage?
-    let description: String?
-    let works: [Work]?
+//    let authorName: String?
+//    let period: String?
+//    let portrait: UIImage?
+//    let description: String?
+//    let works: [Work]?
     
-    init(author: AuthorResponseElement) {
-        self.authorName = author.name
-        self.period = author.lifePeriod
-        self.portrait = UIImage()
-        self.description = ""
-        self.works = []
+    func fetchAuthorDetail(from author: String, completion: @escaping(Result<AuthorDetail, Error>) -> Void) {
+        NetworkManager().fetchAuthorDetail(from: author, completion: { result in
+            switch result {
+            case .success(let authorDetail):
+                completion(.success(authorDetail))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
     }
 }

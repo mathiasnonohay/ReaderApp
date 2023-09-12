@@ -17,12 +17,25 @@ struct AuthorMock {
     let works: [Work]
 }
 
+struct AuthorDetail {
+    let name: String
+    let lifePeriod: String
+    let description: String
+    let works: [Work]
+    
+    enum CodingKeys: String, CodingKey {
+        case name, description
+        case lifePeriod = "life_period"
+        case works
+    }
+}
+
 // MARK: - CardResponseElement
 struct AuthorResponseElement: Codable {
-    let name, link, lifePeriod, biography: String
+    let id, name, link, lifePeriod, biography: String
 
     enum CodingKeys: String, CodingKey {
-        case name, link
+        case id, name, link
         case lifePeriod = "life_period"
         case biography
     }
